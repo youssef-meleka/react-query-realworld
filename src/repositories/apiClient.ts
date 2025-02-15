@@ -52,4 +52,21 @@ apiClient.interceptors.response.use(
   },
 );
 
+// Add Revision-related API calls
+export interface Revision {
+  id: number;
+  title: string;
+  body: string;
+  updated_at: string;
+}
+
+export const getRevisions = async (articleSlug: string): Promise<Revision[]> => {
+  const response = await apiClient.get(`/articles/${articleSlug}/revisions`);
+  return response.data.revisions;
+};
+
+export const revertToRevision = async (articleSlug: string, revisionId: number): Promise<void> => {
+  await apiClient.post(`/articles/${articleSlug}/revisions/${revisionId}/revert`);
+};
+
 export default apiClient;

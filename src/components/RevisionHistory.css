@@ -1,0 +1,29 @@
+.revision-history {
+    margin-top: 20px;
+}
+
+.revision-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.revision-history li {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.revision-history button {
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.revision-history button:hover {
+    background-color: #218838;
+}
